@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+                <!-- FontAwesome  -->
+        <link rel="stylesheet" href="Fontawesome library/all.min.css">
+                <!-- Bootstrap  -->
+        <link rel="stylesheet" href="bootstrap-5.3.0-dist-library/css/bootstrap.min.css">
+                <!-- MDBootstrap  -->
+        <link rel="stylesheet" href="MDbootstrap/mdb.min.css">
+                <!-- custom Css  -->
+        <link rel="stylesheet" href="style.css">
+                <!-- EmailJs  -->
+    <script type="text/javascript" src="https://unpkg.com/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("YPh2b2lAdjI8kv2u-");
+    })();
+    </script>
+    <script type="text/javascript" >  
+function sendEmail() {
+let form = document.querySelector(".contact-form")
+let myName = document.getElementById("name");
+let email = document.getElementById("email");
+let message = document.getElementById("message");
+let button = document.getElementById("submit");
+const serviceId="service_n2nqfs6";
+const templetId="template_c1txvuf";
+
+const inputFields= 
+    {
+        name:myName.value,
+        email:email.value,
+        message:message.value
+}
+emailjs.send(serviceId,templetId,inputFields) 
+.then((res)=>{
+    myName.value="";
+    email.value="";
+    message.value=""
+    console.log(res);
+    alert("Message Sent Succefully");
+}).catch((error) =>{
+    console.log(error);
+})
+}
+    </script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg  sticky-top" style="background-color: rgb(231, 231, 231);" >
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+      <a class="navbar-brand mt-2 ms-3 mt-lg-0" href="index.html">
+          <img
+            src="images/eXtra-logo.svg"
+            height="35"
+            alt="extra Logo"
+            loading="lazy"/>
+        </a>
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li id="category" class="nav-item">
+          <a class="nav-link" href="#"><img src="images/category.png" style="height: 15px;width: 15px;">  Categories</a>
+        </li>
+        <form class="search d-flex input-group w-auto">
+          <input
+            type="search"
+            class="form-control rounded"
+            placeholder="Find gadgets,appliances and inspirations"
+            aria-label="Search"
+            aria-describedby="search-addon"/>
+          <span class="search input-group-text border-0" id="search-addon">
+            <i class="fas fa-search" style="color:skyblue;"></i>
+          </span>
+        </form>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+    <!-- Right elements -->
+    <div class="icons d-flex align-items-center">
+      <div id="contact" class="contact d-flex justify-content-center align-items-center gap-2 mx-1">
+        <i class="fa-solid fa-address-book" style="color: rgb(228, 228, 0);"></i>
+          <p style="font-size: 9px;"> <a style="color: black;" href="index3.html"> hi there <br><span style="font-weight: bold;font-size: 11px;">Contact</span></a></p>
+      </div>
+      <div id="account" class="profile d-flex justify-content-center align-items-center gap-2 mx-1">
+          <i class="fa-solid fa-user" style="color: rgb(228, 228, 0);"></i>
+          <p style="font-size: 9px;">hi there <br><span style="font-weight: bold;font-size: 11px;">Account</span></p>
+      </div>
+      <div class="cart d-flex justify-content-center align-items-center gap-2 mx-1  ">
+              <i id="my-cart" class="fas fa-shopping-cart mx-2" style="color:rgb(228, 228, 0) ;"></i><p id="quantity">0</p>
+              <p style="font-size: 9px;"> your <br><span style="font-weight: bold;font-size: 11px;">cart</span></p>   
+      </div>
+      <div class="menu">
+          <div class="login d-flex justify-content-start pt-3">
+              <i class="fa-solid fa-user" style="color: rgb(228, 228, 0);"></i>
+              <p style="font-size: 12px;"> <a style="color: black;" href="index2.html">login or join</a></p>
+          </div>
+          <div class="order">
+              <hr style="height:2px;width:100%;;color:#50d0ff;background-color:#50d0ff">
+          <h6 class="mb-3">Orders</h6>
+          <div class="track d-flex justify-content-start ">
+              <img src="images/PackageTracking_Icon36.png">
+              <p style="font-size: 12px;">Track Order</p>
+          </div>
+          
+          <div class="return d-flex justify-content-start  ">
+              <img src="images/Exchange_Icon36.png">
+              <p style="font-size: 12px;">Return & Exchanger</p>
+      </div>
+      <hr style="height:2px;width:100%;color:#50d0ff;background-color:#50d0ff">
+          <div class=" tasheel d-flex justify-content-start ">
+              <img src="images/tasheel-icon.svg">
+              <p style="font-size: 12px;">Tasheel</p>
+      </div>
+      <hr style="height:2px;width:100%; color:#50d0ff;background-color:#50d0ff">
+          <div class="extra d-flex justify-content-start ">
+              <img src="images/extra-services.svg">
+              <p style="font-size: 12px;">Extra Services</p>
+      </div>
+      <hr style="height:2px;width:100%; border-width:0;color:#50d0ff;background-color:#50d0ff">
+  
+          <div class="help d-flex justify-content-start ">
+              <img src="images/HelpSupport_Icon36.png">
+              <p style="font-size: 12px;">Help &Support</p>
+      </div>
+      </div>
+  </div>
+  <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- End Nav Bar  -->
+<!-- Start Category menu  -->
+<section>
+  <div class="category-menu">
+      <div class="container-fluid">
+          <div class="all-menu">
+      <h6 class="mb-4 text-center">vacation offers</h6>
+      <hr style="height:2px;width:100%;color:#50d0ff;background-color:#50d0ff">
+      <div class="offer d-flex justify-content-between my-1">
+          <div class="mobile-tab d-flex justify-content-start gap-2">
+              <img src="images/MobileTabletNavNode_1100.png">
+              <p>Mobile & Tablets</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="computer d-flex justify-content-start gap-2">
+              <img src="images/navigationNode_000000RW_1100.png">
+              <p>computing</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="TV d-flex justify-content-start gap-2">
+              <img src="images/navigationNode_000000S8_1100.png">
+              <p>TVs & Entartainment</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="large d-flex justify-content-start gap-2">
+              <img src="images/navigationNode_000000S9_1100.png">
+              <p>Large Appliance</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="Acs d-flex justify-content-start gap-2">
+              <img src="images/cmsitem_00235004_1100.png">
+              <p>ACs</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="small d-flex justify-content-start gap-2">
+              <img src="images/navigationNode_000000SA_1100.png">
+              <p>Small Appliance</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class=" offer d-flex justify-content-between mb-1">
+          <div class="personal d-flex justify-content-start gap-2">
+              <img src="images/cmsitem_00298004_1100.png">
+              <p>Personal care</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class=" gaming d-flex justify-content-start gap-2">
+              <img src="images/extra_sa-NavigationNode-Gaming_1100.png">
+              <p>Gaming</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="home d-flex justify-content-start gap-2">
+              <img src="images/navigationNode_000000SD_1100.png">
+              <p>Home Improvment</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="smart d-flex justify-content-start gap-2">
+              <img src="images/navigationNode_000000SB_1100.png">
+              <p>Smart Home & Gadgets</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="vacation d-flex justify-content-start gap-2">
+              <img src="images/PMP_Icon.png">
+              <p>Vacation Offers</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between mb-1">
+          <div class="extra-gift d-flex justify-content-start gap-2">
+              <img src="images/cmsitem_00298021_1100.png">
+              <p>Extra Gift Card</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+      <div class="offer d-flex justify-content-between">
+          <div class="extra-service d-flex justify-content-start gap-2">
+              <img src="images/navigationNode_00000A18_1100.png">
+              <p>Extra Services</p>
+          </div>
+          <div class="icons"><i class="fa-solid fa-angle-right"></i></div>
+      </div>
+  </div>
+  </div>
+  </div>
+</section>
+<!-- End Category menu  -->
+<!-- Start Payment Section  -->
+<section>
+  <div class="payments">
+      <div class="free d-flex justify-content-center gap-2">
+          <img src="images/Delivery_Icon.png">
+          <p class="text-black-50">Free Delivrey(on order above SAR 99)</p>
+      </div>
+      <div class="collect d-flex justify-content-center gap-2 ">
+          <img src="images/CFS_Icon.png">
+          <p class="text-black-50">Collect From Store</p>
+      </div>
+      <div class="price d-flex justify-content-center gap-2 ">
+          <img src="images/PMP_Icon.png">
+          <p class="text-black-50">Price Match Policy</p>
+      </div>
+      <div class="buy d-flex justify-content-center gap-2 ">
+          <img src="images/Installments_Icon.png">
+          <p class="text-black-50">Buy in installments</p>
+      </div>
+  </div>
+</section>
+<!-- End Payment Section  -->
+<section class="carts">
+  <h1>cart</h1>
+    <div class="cart-items">
+      <ul class="listcard d-flex justify-content-between gap-3 px-5" style="list-style: none;color: orange;">
+        <li style="font-size: 16px; flex:2">name</li>
+        <li style="flex:2; font-size: 16px;">picture</li>
+        <li style="flex:1 ;font-size: 16px;">price</li>
+    </ul>
+    </div>
+  <div class="checkout">
+    <div class="total" style="font-size: 18px;">0</div>
+  </div>
+</section>
+<!-- End Cart Section  -->
+<section class="contact-us"> 
+    <div class="title mt-3 mb-5 ps-5">
+        <a  href="index.html"><span style="color: grey;">Home</span> / <a class="fw-bold" href="index3.html"> Contact </a></a>
+    </div>
+    <div class="container">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d927758.036053668!2d47.48200349205955!3d24.724997881601134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2z2KfZhNix2YrYp9i2INin2YTYs9i52YjYr9mK2Kk!5e0!3m2!1sar!2seg!4v1691251848177!5m2!1sar!2seg" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            <div class="contact-form"> 
+                <h2> contact us </h2>
+                <input id="name" type="text" placeholder="Name" class="contact-form-txt" >
+                <input id="email" type="text" placeholder="Email" class="contact-form-txt">
+                <textarea id="message" name="message" placeholder="message" class="contact-form-textarea"></textarea>
+                 <input onclick="sendEmail()" id="submit" type="submit" name="submit" class="contact-form-btn" >
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- Start Services Section  -->
+<section class="services">
+    <div class="container-fluid">
+      <div class="all-services">
+        <div class="service  col-lg-2 col-md-6">
+          <div class="image text-center mb-3"><img src="images/HelpSupport_Icon36.png"></div>
+         <div class="text-center mb-2"> <a class="text-center fw-bold text-black fs-5" href="#" style="text-align: center;">Help & Support</a></div>
+          <div class="text-center"><a  class="text-black-50 " href="#" style="text-align: center;">Have any questions? We'll help you with all your product needs.</a></div>
+        </div>
+      <div class="service col-lg-2 col-md-6">
+        <div class="image text-center mb-3"><img src="images/PackageTracking_Icon36.png"></div>
+       <div class="text-center mb-2"> <a class="text-center fw-bold text-black fs-5" href="#" style="text-align: center;">Order Tracking</a></div>
+        <div class="text-center"><a class="text-black-50" href="#" style="text-align: center;">Keep track of your order’s process, whether delivery or pickup.</a></div>
+      </div>
+      <div class="service col-lg-2 col-md-6">
+        <div class="image text-center mb-3"><img src="images/Exchange_Icon36.png"></div>
+       <div class="text-center mb-2"> <a class="text-center fw-bold text-black fs-5" href="#" style="text-align: center;">Return & Exchange</a></div>
+        <div class="text-center"><a class="text-black-50" href="#" style="text-align: center;">Everything you need to know about our return & exchange policies.</a></div>
+      </div>
+      <div class="service col-lg-2 col-md-6">
+        <div class="image text-center mb-3"><img src="images/PMP_Icon36.png"></div>
+       <div class="text-center mb-2"> <a class="text-center fw-bold text-black fs-5" href="#" style="text-align: center;">Price Match</a></div>
+        <div class="text-center"><a class="text-black-50" href="#" style="text-align: center;">Learn how our price match policy can lower your purchase costs.</a></div>
+      </div>
+      <div class="service col-lg-2 col-md-6">
+        <div class="image text-center mb-3"><img src="images/Payment_Icon36.png"></div>
+       <div class="text-center mb-2"> <a class="text-center fw-bold text-black fs-5" href="#" style="text-align: center;">Flexiable Payment</a></div>
+        <div class="text-center"><a class="text-black-50" href="#" style="text-align: center;">Plenty of options to make your purchase, including flexible installment plans.</a></div>
+      </div>
+    </div>
+    </div>
+</section>
+<!-- End Services Section  -->
+<!-- Start Footer Section  -->
+<footer>
+    <div class="container-fluid">
+      <div class="row pb-5">
+        <div class="col-lg-3 mb-2">
+          <div class="extraa d-flex justify-content-center align-items-center gap-3 mb-3 text-start">
+            <div class="image"><img src="images/eXtraFooterLogo.png"></div>
+            <div class="text">
+              <h5 class="text-white fw-bold">eXtra anytime, anywhere!</h5>
+              <p style="font-size: 12px;" class="text-white-50">Make sure to download our app for an enhanced shopping experience and exclusive deals!</p>
+            </div>
+          </div>
+          <div class="codes d-flex justify-content-center align-items-center gap-3 mb-4 text-start">
+            <div class="image"><img class="qrcode" src="images/qr-code-prod.png"></div>
+            <div class="images d-flex justify-content-center align-items-center flex-column gap-3 ">
+              <img class="logoo" src="images/Download_on_the_App_Store_Badge.png" >
+              <img class="logoo" src="images/google-play-badge-updated.png">
+              <img class="logoo" src="images/appGallery.png">
+            </div>
+          </div>
+          <div class="visa d-flex justify-content-center align-items-center gap-3 mb-3 text-start">
+            <img src="images/Mada_footerlogo.png">
+            <img src="images/visa_footerlogo.png" >
+            <img src="images/mc_footerlogo.png" >
+            <img src="images/AXP_footerlogo.jpg" >
+            <img src="images/ApplePay_footerlogo.png">
+          </div>
+          <img class="text-start" src="images/thawte_footerlogo.png" style="width: 130px;height: 60px;cursor: pointer;">
+        </div>
+        <div class="links col-lg-2 mb-2">
+          <ul>
+            <li>About us</li>
+            <li><a href="#">Company Information</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Corporate Sales</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="links col-lg-2 mb-2">
+          <ul>
+          <li>Our services</li>
+          <li><a href="#">ExtraSet-Up</a></li>
+          <li><a href="#">ExtraSafeguard</a></li>
+          <li><a href="#">ExtraCare</a></li>
+          <li><a href="#">ExtraRepair</a></li>
+        </ul>
+        </div>
+        <div class="links col-lg-2 mb-2">
+          <ul>
+          <li>Need help?</li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Tasheel</a></li>
+          <li><a href="#">Return & Exchange</a></li>
+          </ul>
+        </div>
+        <div class="contact col-lg-2 mb-2">
+          <h5 class="text-white">Contact Us</h5>
+          <p class="text-white mb-3">Find us on social platforms</p>
+          <div class="social d-flex justify-content-center align-items-center gap-3">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+          </div>
+          <div class="call mt-3">
+            <p>call us</p>
+            <div class="telephone d-flex justify-content-center align-items-center gap-3">
+              <i class="fa-solid fa-phone"></i>
+              <span>96 001 50 23</span>
+            </div>
+            <span class="text-white-50 mt-3" style="font-size: 10px;">Saturday - Thursday: 9:00 AM - 10:00 PM Friday: 4:00 PM - 10:00 PM</span>
+          </div>
+          <p class="text-white mt-3">Extra Stores</p>
+          <div class="extra-stores d-flex justify-content-center gap-3">
+            <i class="fa-brands fa-redhat"></i>
+            <p>See Your Stories</p>
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+          <p class="text-white-50"style="font-size: 10px;">Working hours might differ between stores</p>
+        </div>
+      </div>
+      <hr style="width: 90%;margin: auto;border: 1px solid white;">
+      <div class="copy-right">
+        <div class="container">
+        <div class="row mt-5">
+          <div class="last d-flex justify-content-between align-items-center ">
+            <p style="font-size: 12px;" class="text-white">Copyright © 2023 extra.com. All rights reserved.</p>
+            <img  src="images/Pay-Big-Logo.png" style="height: 50px;width: 70px;">
+              <ul class="privacy-links d-flex justify-content-center align-items-center gap-3">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <p class="text-white-50 text-center mt-5" style="font-size: 12px;">United Electronics Co. – eXtra. Online Store CR No. 2051232505. VAT No. 300468781910003</p> 
+        </div>
+      </div>
+      </div>
+    </div>
+  
+</footer>
+<!-- End Footer Section  -->
+<!-- Loader page  -->
+<div class="loader"></div>
+<!-- fontAwesome JS  -->
+<script src="Fontawesome library/all.min.js"></script>
+<!-- Bootstrap  -->
+<script src="bootstrap-5.3.0-dist-library/js/bootstrap.bundle.min.js"></script>
+<!-- MDbootsrtap Js  -->
+<script src="MDbootstrap/mdb.min.js"></script>
+<!-- Custom JS  -->
+<script src="main.js"></script>
+
+</body>
+</html>
+    
