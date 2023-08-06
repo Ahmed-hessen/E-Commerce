@@ -878,9 +878,12 @@ footer ul.privacy-links li:hover a::after{
     left: 350px;
     cursor: pointer;
 }
+.sign input[type="submit"] {
+    color: grey;
+}
 .sign input[type="submit"]:hover{
     background-color: blue;
-    color: gray;
+    color: white;
 }
 .sign .socials svg {
     color: blue;
