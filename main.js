@@ -27,49 +27,6 @@ accountMenu.addEventListener("mouseleave",function(){
     accountMenu.style.display="none";
 })
 //End nav bar hover on account 
-// =======================================================
-// Start  Nav Bar Click On Categories 
-let categories = document.getElementById("category");
-let categoryMenu=document.querySelector(".category-menu");
-
-categories.addEventListener("click",()=> {
-  body.classList.toggle("active")
-})
-
-// End  Nav Bar Click On Categories
-// =========================================================== 
-// Start Grab Product Section 
-const productsContainer = document.querySelector(".products-container");
-let isDragging = false;
-let startPos = 0;
-let scrollLeft = 0;
-
-productsContainer.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startPos = e.clientX;
-    scrollLeft = productsContainer.scrollLeft;
-    productsContainer.style.cursor = "grabbing";
-
-    // Prevent text selection during drag
-    e.preventDefault();
-});
-
-document.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-    const delta = e.clientX - startPos;
-    productsContainer.scrollLeft = scrollLeft - delta;
-});
-
-document.addEventListener("mouseup", () => {
-    isDragging = false;
-    productsContainer.style.cursor = "grab";
-});
-
-document.addEventListener("mouseleave", () => {
-    isDragging = false;
-    productsContainer.style.cursor = "grab";
-});
-// End Grab Product Section 
 // ========================================================
 // Start Top Selling Section 
 const carouselContent = document.querySelector('.carousel-content');
