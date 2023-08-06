@@ -430,7 +430,7 @@ section.product {
     padding: 50px;
 }
 .code button {
-    font-size: 32px;  
+    font-size: 28px;  
 }
 @media (max-width:768px){
     .code button {
