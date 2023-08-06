@@ -28,6 +28,16 @@ accountMenu.addEventListener("mouseleave",function(){
 })
 //End nav bar hover on account 
 // ========================================================
+// Start  Nav Bar Click On Categories
+let categories = document.getElementById("category");
+let categoryMenu=document.querySelector(".category-menu");
+
+categories.addEventListener("click",()=> {
+  body.classList.toggle("active")
+})
+
+// End  Nav Bar Click On Categories
+// ========================================================
 // Start Top Selling Section 
 const carouselContent = document.querySelector('.carousel-content');
 let scrollAmount = 250; 
