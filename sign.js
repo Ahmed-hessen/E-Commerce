@@ -16,7 +16,7 @@ showPassWord.onclick = function showMyPass() {
 // Start function to Validate 
 function formValidate(){
 let myEmail = document.getElementById("email").value;
-let passWord = document.getElementById("pass").value;
+let myPassWord = document.getElementById("pass").value;
 let myName= document.getElementById("name").value;
 
 let error = document.getElementById("error");
@@ -29,7 +29,7 @@ let text="";
     text="Please Enter Avalid Email"
     error.innerHTML=text;
     return false;
-}else if (passWord.length < 8 ){
+}else if (myPassWord.length < 8 ){
     text="Please enter more than eight character in password"
     error.innerHTML=text;
     return false;
