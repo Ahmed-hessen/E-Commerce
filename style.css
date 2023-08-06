@@ -951,6 +951,10 @@ footer ul.privacy-links li:hover a::after{
     }
     p.social{
         text-align: center;
+    }.sign input{
+        width: 100%;
+    }.sign p#show,.sign p#forget{
+        font-size: 12px;
     }
 }
 /* End Sign in Section  */
