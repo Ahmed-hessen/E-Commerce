@@ -1,5 +1,5 @@
+![Screenshot (28)](https://github.com/Ahmed-hessen/E-commerce/assets/128532764/427bf401-8ab3-4d8c-9bbe-bcdfaebf9413)
 
-![Screenshot (28)](https://github.com/Ahmed-hessen/E-commerce/assets/128532764/11f3d6d6-0469-477f-b542-948e7018faf9)
 # E-Commerce Wonderland of Electronic Delights 🌟
 
 Step into a world of technological enchantment with our Electronic Devices E-Commerce platform! This isn't just a shopping site; it's a journey infused with joy and innovation. Let the emotions flow:
@@ -34,5 +34,9 @@ Step into a world of technological enchantment with our Electronic Devices E-Com
 
 3. **Embark on the Journey:**
    - Feel the pulse of technology and embark on a journey of joyous exploration and delightful shopping. 🌐🛍️✨
+
+
+![Screenshot (28)](https://github.com/Ahmed-hessen/E-commerce/assets/128532764/427bf401-8ab3-4d8c-9bbe-bcdfaebf9413)
+
 
 This isn't just a platform; it's a wonderland of electronic delights. Join us on this magical journey, where technology meets emotions! 🌐🛒✨
